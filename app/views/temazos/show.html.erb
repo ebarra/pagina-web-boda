@@ -1,0 +1,21 @@
+<%if notice%>
+	<p class="alert-message info" id="notice"><%= notice %></p>
+<%end%>
+
+<p>
+  <b>Nombre:</b>
+  <%= @temazo.nombre %>
+</p>
+
+<p>
+  <b>Tema:</b>
+  <%= @temazo.tema %>
+</p>
+
+<p>
+  <b>Autor:</b>
+  <%= @temazo.autor %>
+</p>
+
+
+<%= link_to 'Atrás', temazos_path %>

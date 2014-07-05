@@ -1,4 +1,7 @@
 PaginaWebBoda::Application.routes.draw do
+  resources :temazos
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

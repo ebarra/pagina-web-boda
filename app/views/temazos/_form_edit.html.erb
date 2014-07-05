@@ -1,0 +1,43 @@
+<%= form_for(@temazo) do |f| %>
+  <% if @temazo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@temazo.errors.count, "error") %> impidió que este temazo se guardara:</h2>
+
+      <ul>
+      <% @temazo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre, 'Tu nombre' %><br />
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :tema %><br />
+    <%= f.text_field :tema %>
+  </div>
+  <div class="field">
+    <%= f.label :autor %><br />
+    <%= f.text_field :autor %>
+  </div>
+  <div class="field">
+    <label for="clave_admin">Clave admin</label><br>
+    <input id="clave_admin" name="clave_admin" size="30" type="text" value="">
+  </div>
+
+  <div class="form_buttons">
+    <div class="inline_button">
+      <button onclick="location.href='<%=temazos_path%>'" type="button">Atrás</button>
+    </div>
+    <span class="">&nbsp;&nbsp;</span>
+    <div class="inline_button actions">
+      <%= f.submit "Editar Temazo"%>
+    </div>
+    <span class="">&nbsp;&nbsp;</span>
+    <%= link_to 'Borrar!', @temazo, method: :delete, data: { confirm: '¿Seguro?' } %>
+  </div>
+
+<% end %>
