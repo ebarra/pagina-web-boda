@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+  <input id="temazo_delete" name="delete" type="hidden" value="false">
+
   <div class="field">
     <%= f.label :nombre, 'Tu nombre' %><br />
     <%= f.text_field :nombre %>
@@ -37,7 +39,21 @@
       <%= f.submit "Editar Temazo"%>
     </div>
     <span class="">&nbsp;&nbsp;</span>
-    <%= link_to 'Borrar!', @temazo, method: :delete, data: { confirm: '¿Seguro?' } %>
+    <div class="inline_button actions">
+      <%= f.submit "Borrar Temazo", :id=> "delete_button"%>
+    </div>
   </div>
 
 <% end %>
+
+
+<script>
+$( document ).ready(function() {
+  $("#delete_button").on("click", function(){
+     $("#temazo_delete").val("true");
+
+  });
+});
+
+ 
+</script>

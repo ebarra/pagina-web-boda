@@ -1,14 +1,15 @@
 development:
-  adapter: mysql2
-  database: boda_development
+  adapter: postgresql
   encoding: utf8
-  username: root
-  password: 
-  socket: /var/run/mysqld/mysqld.sock
+  database: boda_development
+  pool: 5
+  username: boda4
+  password: enriqueybea
 
 production:
-  adapter: mysql2
+  adapter: postgresql
+  encoding: utf8
   database: boda_production
-  username: root
-  password:
-  socket: /var/run/mysqld/mysqld.sock
+  pool: 5
+  username: boda4
+  password: enriqueybea
