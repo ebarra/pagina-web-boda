@@ -1,0 +1,144 @@
+<html lang="es
+"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon4.png">
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+
+    <title>Boda Enrique y Bea</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+    <!-- Custom styles for this template -->
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    
+    <%= stylesheet_link_tag "application" %>
+  	<%= javascript_include_tag "application" %>
+  	<script>
+  	$(document).ready(function(){
+  		var pathname = window.location.pathname;
+  		if(pathname.indexOf("historia") > -1){
+  			$(".historia_tab").addClass("active");
+  		}
+  		else if(pathname.indexOf("evento") > -1){
+  			$(".evento_tab").addClass("active");
+  		}
+  		else if(pathname.indexOf("alojamientoymas") > -1){
+  			$(".alojamientoymas_tab").addClass("active");
+  		}
+  		else if(pathname.indexOf("eltiempo") > -1){
+  			$(".eltiempo_tab").addClass("active");
+  		}
+  		else if(pathname.indexOf("temazos") > -1){
+  			$(".temazos_tab").addClass("active");
+  		}
+  		else if(pathname.indexOf("contacto") > -1){
+  			$(".contacto_tab").addClass("active");
+  		}  		
+  		else{
+  			$(".home_tab").addClass("active");
+  		}
+  	});
+  	</script>
+  </head>
+<body>
+	<div id="lazo">
+      <div id="izquierda">
+          <div class="ribbon-wrapper">
+        <div class="ribbon-front"><span>
+          25-10-2014</span>
+        </div>
+        <div class="ribbon-edge-topleft"></div>
+        <div class="ribbon-edge-topright"></div>
+        <div class="ribbon-edge-bottomleft"></div>
+        <div class="ribbon-edge-bottomright"></div>
+        <div class="ribbon-back-left"></div>
+        <div class="ribbon-back-right"></div>
+      </div>
+    </div>
+    
+    <div id="derecha">
+        <div class="ribbon-wrapper">
+        <div class="ribbon-front"><span>
+          Toledo</span>
+        </div>
+        <div class="ribbon-edge-topleft"></div>
+        <div class="ribbon-edge-topright"></div>
+        <div class="ribbon-edge-bottomleft"></div>
+        <div class="ribbon-back-left"></div>
+        <div class="ribbon-back-right"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="nombres">
+      <h1 style="text-align: center;" class="">
+        <span style="" class="font_0">ENRIQUE &amp; BEA</span>
+      </h1>
+    </div>
+
+
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <div class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">              
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="caret"></span>
+              </button>
+              <span class="navbar-toggle2">Menu: </span>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="home_tab"><a href="index">Home</a></li>
+                <li class="historia_tab"><a href="historia">Historia</a></li>
+                <li class="evento_tab"><a href="evento">Evento</a></li>
+                <li class="alojamientoymas_tab"><a href="alojamientoymas">Alojamiento y mas</a></li>
+                <li class="eltiempo_tab"><a href="eltiempo">El tiempo</a></li>
+                <li class="temazos_tab"><a href="temazos">Temazos</a></li>
+                <li class="contacto_tab"><a href="contacto">Contacto</a></li>                
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+	<%= yield %>
+
+
+	<div id="footer">
+      <div class="container text-center">
+        <div class="float_right">
+          <span class="font_faltan">Faltan: </span>
+          <script src="/assets/kikecountdown.js"></script>
+        </div>
+        <div class="float_left">
+          <a href="contacto.html"><span class="font_footer">Contacto</span></a>-- 
+          <a href="#"><span class="font_footer">Volver arriba</span></a>
+        </div>       
+        
+      </div>
+    </div>    
+</body>
+
+</html>

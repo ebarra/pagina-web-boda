@@ -1,0 +1,29 @@
+<div class="container cuerpo-pagina text-center">
+
+  <%if notice%>
+    <p class="alert-message info" id="notice"><%= notice %></p>
+  <%end%>
+
+  <h2>Lista de temazos</h2>  
+  <%= link_to 'Añadir Temazo', new_temazo_path %>
+
+  <table class="table">
+    <tr>
+      <th>Nombre</th>
+      <th>Tema</th>
+      <th>Autor</th>
+    </tr>
+
+  <% @temazos.each do |temazo| %>
+    <tr>
+      <td><%= temazo.nombre %></td>
+      <td><%= temazo.tema %></td>
+      <td><%= temazo.autor %></td>
+    </tr>
+  <% end %>
+  </table>
+
+  <%= link_to 'Añadir Temazo', new_temazo_path %>
+
+
+</div>
