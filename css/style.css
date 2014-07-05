@@ -1,0 +1,381 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  padding-top: 20px;
+  /* Margin bottom by footer height */
+  margin-bottom: 120px;
+  background-image: url("/fotos/fondo4.png");
+  background-repeat: repeat;
+  background-position: top left;
+  background-attachment: scroll;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+color: #555;
+background-color: #ccc;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+color: #555;
+background-color: #ccc;
+}
+
+.navbar-default {
+background-color: #e7e7e7;
+border-color: black;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  /*height: 55px;*/
+  background-color: #e7e7e7;
+  padding-top: 8px;
+}
+
+.font_0 {
+	font-family: georgia, palatino, 'book antiqua', 'palatino linotype', serif;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	color: #4B95B7;
+}
+
+.font_faltan{
+	font-size: 2.5em;
+	color: #4B95B7;
+	font-weight: bold;
+	text-align: right;
+}
+
+.font_titulo_pagina{
+	font-size: 2.5em;
+	color: #4B95B7;
+	font-weight: bold;
+	text-align: right;
+}
+
+.font_footer{
+	color: #4B95B7;
+	font-weight: bold;
+	text-align: right;
+	font-size: 1.2em;
+}
+
+.huge_font{
+	font-size: 4em;
+}
+
+hr {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 500px;
+  margin-bottom: 60px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 500px;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+  max-width: none;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Pad the edges of the mobile views a bit */
+.marketing {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+  body{
+  	font-size: 14px;
+  }
+
+  h1 span{
+  	font-size: 1.3em;
+  }
+
+  h2 {
+  	font-size: 2em;
+  }
+
+  h3{
+  	font-size: 1.5em;
+  }
+	 
+  .carousel {
+	  margin-top: 60px;
+  }
+
+  /* Remove the edge padding needed for mobile */
+  .marketing {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 86px;
+  }
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left:  15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left:  0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    line-height: 1.4;
+  }
+
+  #nombres {
+	margin-top: -20px;
+	width: 50%;
+	margin-left: 25%;
+  }
+
+  .cuerpo-pagina{
+  	margin-top: 80px;
+  }
+
+  .navbar-toggle2 {
+	display: none;
+  }
+
+  .titulo-pagina{
+	display: none;
+  }
+
+}
+
+
+@media (max-width: 767px) {
+  body{
+  	font-size: 14px;
+  }
+
+  h1 span {
+  	font-size: 0.9em;
+  }
+
+  h2{
+  	font-size: 2em;
+  }
+
+  h3 {
+  	font-size: 1.5em;
+  }
+
+  .carousel {
+	  margin-top: 0px;
+  }
+
+  #nombres {
+	margin-top: 46px;
+	width: 50%;
+	margin-left: 25%;
+  }
+
+  .navbar-toggle2 {
+	display: block;
+	float: right;
+	font-size: 1.8em;
+	padding: 9px 10px;	
+	color: #4B95B7;
+	font-weight: bold;
+	text-align: right;
+  }
+
+  .titulo-pagina{
+	display: block;
+  }
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+
+.container .text-muted {
+  margin: 10px 0;
+}
+
+.img-circle {
+	border-radius: 22%;
+}
+
+.navbar-default .navbar-nav>li>a {
+	font-size: 1.2em;
+}
+
+.highlight-box{
+	padding: 9px 14px;
+	margin-bottom: 14px;
+	background-color: #f7f7f9;
+	border: 1px solid #e1e1e8;
+	border-radius: 4px;
+	width: 425px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+}
+
+.foto_junto_mapa{
+	margin-bottom: 30px;
+}
+
+.foto_junto_mapa img{
+	max-width: 425px;
+	width: 100%;
+}
+
+.mapa_evento{
+	max-width: 425px;
+}
+
+.hotel_caja{
+	border-radius: 4px;
+	border-width: 1px!important;
+	border-color: #d7d7d7;
+	border-style: solid;
+	padding: 5px;
+	float:left;
+	background-color: white;
+}
+
+
+.hotel_foto{
+	float: left;
+	width: 40%;
+}
+
+.hotel_info{
+	float: left;
+	width: 56%;
+	margin-left: 10px;
+}
+
+#sjdlr{
+	margin-top: 5px;
+}
+
+.que_visitar_mensaje{
+	margin-bottom: 10px;
+}
+
+.float_right{
+	float: right;
+}
+
+.float_left{
+	float: left;
+}
+
+.navbar-header .caret {
+	margin-top: 6px;
+}
+
+
+.navbar-toggle .icon-bar {
+	float: left;
+}
+
+.navbar-toggle {
+	width: 55px;
+}
+
+.taxi-row{
+	padding-left: 15px;
+	padding-right: 15px;
+	background-color: #f5f5f5;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+#eltiempo_img{
+	width: 100%;
+	max-width: 593;
+}
+
+#img_sobre{
+	width: 100%;
+	max-width: 320px;
+}
+
