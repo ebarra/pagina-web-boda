@@ -1,4 +1,13 @@
 PaginaWebBoda::Application.routes.draw do
+  root to: 'static_pages#index'
+  match '/index',    to: 'static_pages#index'
+  match '/alojamientoymas',    to: 'static_pages#alojamientoymas'
+  match '/contacto',    to: 'static_pages#contacto'
+  match '/eltiempo',    to: 'static_pages#eltiempo'
+  match '/historia',    to: 'static_pages#historia'
+  match '/evento',    to: 'static_pages#evento'
+
+
   resources :temazos
 
 

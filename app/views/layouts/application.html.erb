@@ -15,19 +15,44 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
     <!-- Custom styles for this template -->
-    <link href="/assets/style.css" rel="stylesheet">
-    <link href="/assets/ribbon.css" rel="stylesheet">
-
+    
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <script src="/assets/countdown.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <script src="/assets/docs.min.js"></script>
+    
+    <%= stylesheet_link_tag "application" %>
+  	<%= javascript_include_tag "application" %>
+  	<script>
+  	$(document).ready(function(){
+  		var pathname = window.location.pathname;
+  		if(pathname.indexOf("historia") > -1){
+  			$(".historia_tab").addClass("active");
+  		}
+  		else if(pathname.indexOf("evento") > -1){
+  			$(".evento_tab").addClass("active");
+  		}
+  		else if(pathname.indexOf("alojamientoymas") > -1){
+  			$(".alojamientoymas_tab").addClass("active");
+  		}
+  		else if(pathname.indexOf("eltiempo") > -1){
+  			$(".eltiempo_tab").addClass("active");
+  		}
+  		else if(pathname.indexOf("temazos") > -1){
+  			$(".temazos_tab").addClass("active");
+  		}
+  		else if(pathname.indexOf("contacto") > -1){
+  			$(".contacto_tab").addClass("active");
+  		}  		
+  		else{
+  			$(".home_tab").addClass("active");
+  		}
+  	});
+  	</script>
   </head>
 <body>
 	<div id="lazo">
@@ -83,13 +108,13 @@
             </div>
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="historia.html">Historia</a></li>
-                <li><a href="evento.html">Evento</a></li>
-                <li><a href="alojamientoymas.html">Alojamiento y mas</a></li>
-                <li><a href="eltiempo.html">El tiempo</a></li>
-                <li class="active"><a href="temazos">Temazos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>                
+                <li class="home_tab"><a href="index">Home</a></li>
+                <li class="historia_tab"><a href="historia">Historia</a></li>
+                <li class="evento_tab"><a href="evento">Evento</a></li>
+                <li class="alojamientoymas_tab"><a href="alojamientoymas">Alojamiento y mas</a></li>
+                <li class="eltiempo_tab"><a href="eltiempo">El tiempo</a></li>
+                <li class="temazos_tab"><a href="temazos">Temazos</a></li>
+                <li class="contacto_tab"><a href="contacto">Contacto</a></li>                
               </ul>
             </div>
           </div>
@@ -98,9 +123,7 @@
       </div>
     </div>
 
-	<div class="container cuerpo-pagina text-center">
-		<%= yield %>
-	</div>
+	<%= yield %>
 
 
 	<div id="footer">
@@ -115,11 +138,7 @@
         </div>       
         
       </div>
-    </div>
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    
+    </div>    
 </body>
 
 </html>

@@ -1,21 +1,25 @@
-<%if notice%>
-	<p class="alert-message info" id="notice"><%= notice %></p>
-<%end%>
+<div class="container cuerpo-pagina text-center">
 
-<p>
-  <b>Nombre:</b>
-  <%= @temazo.nombre %>
-</p>
+	<%if notice%>
+		<p class="alert-message info" id="notice"><%= notice %></p>
+	<%end%>
 
-<p>
-  <b>Tema:</b>
-  <%= @temazo.tema %>
-</p>
+	<p>
+	  <b>Nombre:</b>
+	  <%= @temazo.nombre %>
+	</p>
 
-<p>
-  <b>Autor:</b>
-  <%= @temazo.autor %>
-</p>
+	<p>
+	  <b>Tema:</b>
+	  <%= @temazo.tema %>
+	</p>
+
+	<p>
+	  <b>Autor:</b>
+	  <%= @temazo.autor %>
+	</p>
 
 
-<%= link_to 'Atrás', temazos_path %>
+	<%= link_to 'Atrás', temazos_path %>
+
+</div>
