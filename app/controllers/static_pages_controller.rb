@@ -11,7 +11,7 @@ class StaticPagesController < ApplicationController
   def evento
   end
 
-  def eltiempo
+  def viaje
   end
 
   def historia
