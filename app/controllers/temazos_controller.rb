@@ -2,8 +2,8 @@ class TemazosController < ApplicationController
   # GET /temazos
   # GET /temazos.json
   def index
-    @temazos = Temazo.all
-
+    #@temazos = Temazo.all
+    @temazos = Temazo.find(:all, :conditions => ["id > ?", 100])
     respond_to do |format|
       format.html # index.html.erb
     end
